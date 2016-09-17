@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+var Login = require('./Login.js');
+
 class FavourApp extends Component {
   render() {
     return (
@@ -26,6 +28,7 @@ class FavourApp extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <Login />
       </View>
     );
   }

@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-  View
+  View,
+  TouchableHighlight,
+  Text,
+  StyleSheet
 } from 'react-native';
 
 const FBSDK = require('react-native-fbsdk');
@@ -9,13 +12,15 @@ const {
 } = FBSDK;
 
 var Login = React.createClass({
-  render: function() {
+  render: function(route, navigator) {
     return (
       <View>
         <LoginButton
           permissions={["public_profile", "email"]}
+          loginBehaviorIOS="web"
           onLoginFinished={
             (error, result) => {
+              var navigator = this.props.navigator;
               if (error) {
                 console.log(error);
                 alert("Login failed with error: " + error);
@@ -24,8 +29,7 @@ var Login = React.createClass({
               } else {
                 alert("Login was successful with permissions: " + result.grantedPermissions)
               }
-            }
-          }
+          }}
           onLogoutFinished={() => alert("User logged out")}/>
       </View>
     );

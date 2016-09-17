@@ -11,8 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-
-var Login = require('./Login.js');
+import MainNavigator from './MainNavigator';
 
 class FavourApp extends Component {
   render() {
@@ -21,7 +20,7 @@ class FavourApp extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <Login />
+        <MainNavigator />
       </View>
     );
   }
