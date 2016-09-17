@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+var Login = require('./Login.js');
+
 class FavourApp extends Component {
   render() {
     return (
@@ -19,13 +21,7 @@ class FavourApp extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Login />
       </View>
     );
   }
